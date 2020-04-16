@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import com.oehm2.assosiations.dto.Library;
 import com.oehm2.assosiations.dto.Team;
 
 public class CommonDao {
@@ -18,6 +19,19 @@ public class CommonDao {
 		Session session = sessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();
 		session.save(team);
+		transaction.commit();
+	}
+	
+	
+	
+	public void saveLibraryDetails(Library library) {
+		//hib logic to save data into db
+		Configuration configuration = new Configuration();
+		configuration.configure();
+		SessionFactory sessionFactory = configuration.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		session.save(library);
 		transaction.commit();
 	}
 	

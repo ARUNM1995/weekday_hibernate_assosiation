@@ -12,6 +12,8 @@
 		<property name="hbm2ddl.auto">update</property>
 		<mapping class="com.oehm2.assosiations.dto.Team"/>
 		<mapping class="com.oehm2.assosiations.dto.Captain"/>
+		<mapping class="com.oehm2.assosiations.dto.Library"/>
+		<mapping class="com.oehm2.assosiations.dto.Book"/>
 		
 	</session-factory>
 </hibernate-configuration>

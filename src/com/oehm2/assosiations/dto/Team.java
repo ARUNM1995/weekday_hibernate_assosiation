@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -27,7 +28,7 @@ public class Team implements Serializable {
 	private Long size;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "cap_id")
+	@PrimaryKeyJoinColumn(name = "cap_id")
 	private Captain captain;
 	
 	public Team() {
