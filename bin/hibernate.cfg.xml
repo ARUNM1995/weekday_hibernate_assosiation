@@ -10,10 +10,17 @@
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.show_sql">true</property>
 		<property name="hbm2ddl.auto">update</property>
-		<mapping class="com.oehm2.assosiations.dto.Team"/>
-		<mapping class="com.oehm2.assosiations.dto.Captain"/>
-		<mapping class="com.oehm2.assosiations.dto.Library"/>
-		<mapping class="com.oehm2.assosiations.dto.Book"/>
 		
+		<mapping class="com.oehm2.assosiations.dto.Questions"/>
+		<mapping class="com.oehm2.assosiations.dto.Answers"/>
+		
+		<mapping class="com.oehm2.assosiations.dto.State" />
+		 <mapping class="com.oehm2.assosiations.dto.Country" />
+		 
+		<mapping class="com.oehm2.assosiations.dto.Team" />
+		<mapping class="com.oehm2.assosiations.dto.Captain" />
+		<mapping class="com.oehm2.assosiations.dto.Library" />
+		<mapping class="com.oehm2.assosiations.dto.Book" />
+
 	</session-factory>
 </hibernate-configuration>
